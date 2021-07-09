@@ -9,7 +9,7 @@
 
 .section-inner{
     max-width: 1280px;
-    
+    padding: 0 15px;
     margin: 0 auto;
 }
 
@@ -46,10 +46,10 @@
 .cube-img::after{
     content: "";
     position: absolute;
-    width: 35%;
-    height: 35%;
+    width: 40%;
+    height: 40%;
     border:20px solid #E8C300;
-    top:30%;
+    top:25%;
     right: 0;
     
 }
