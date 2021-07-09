@@ -26,3 +26,30 @@
 .btn:hover{
     background-color: #E8C300;
 }
+
+.text-line-yellow{
+    position: relative;
+}
+.text-line-yellow::after{
+    content: "";
+    position: absolute;
+    width: 8%;
+    height: 5px;
+    background-color: #E8C300;
+    border-radius: 50px;
+    right: 45%;
+    bottom: -10%;
+}
+.cube-img{
+    position: relative;
+}
+.cube-img::after{
+    content: "";
+    position: absolute;
+    width: 35%;
+    height: 35%;
+    border:20px solid #E8C300;
+    top:30%;
+    right: 0;
+    
+}
