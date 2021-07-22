@@ -41,14 +41,15 @@
     right: 45%;
     bottom: -10%;
 }
-@mixin cube(){
+@mixin cube($px:40%,$top:25%){
     content: "";
     position: absolute;
-    width: 40%;
-    height: 40%;
+    width: $px;
+    height: $px;
     border:20px solid #E8C300;
-    top:25%;
+    top:$top;
     border-radius: 3%;
+    
 }
 
 .cube-img{
@@ -60,13 +61,27 @@
     }
     &__left::after{
         left: -6%;
-        @include cube()
+        @include cube(40%)
     }
-    @media(max-width:770px){
+  
+    @media(max-width:850px){
         &__left::after{
-            left: 0;
+    
+            @include cube(20%,35%)
+        }
+        &__rigth::after{
+            @include cube(20%,35%)
+        }
+        
+    }
+    @media(max-width:780px){
+        &__left::after{
             @include cube()
         }
+        &__rigth::after{
+            @include cube()
+        }
+        
     }
     
     
