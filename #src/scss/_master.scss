@@ -48,11 +48,13 @@
     }
     &__body{
         display: flex;
-        padding-bottom: 5%;
+        // padding-bottom: 5%;
+        padding: 0 20px 5% 20px;
     }
     &__wrapper-img{
         flex:1 1 33%;
         z-index: 10;
+        // background-color: aqua;
         
         img{
             width: 100%;
@@ -62,6 +64,7 @@
         }
     }
     &__text-block{
+        // background-color: bisque;
         text-align: center;
         flex:1 1 33%;
         padding-top: 5%;
@@ -70,7 +73,7 @@
            color: rgba(255, 255, 255, 0.6)
        }
     } 
-    @media (max-width:770px){
+    @media (max-width:760px){
         &__body{
             flex-direction: column;
         }

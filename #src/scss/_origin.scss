@@ -59,7 +59,7 @@
         position: relative;
     }
     &__left::after{
-        left: -15%;
+        left: -6%;
         @include cube()
     }
     @media(max-width:770px){
@@ -68,6 +68,8 @@
             @include cube()
         }
     }
+    
+    
     &__rigth::after{
         right: 0;
         @include cube()
