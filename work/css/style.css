@@ -915,6 +915,8 @@ template {
   width: 100%;
   margin-bottom: 10px;
   height: 60px;
+  color: crimson;
+  padding: 0 10%;
 }
 
 .forma__flex {
