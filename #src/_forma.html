@@ -4,24 +4,18 @@
             <div class="section-forma__block-forma">
                 <h1 class="section-forma__title text-line-yellow">book a table</h1>
                 <div class="section-forma__wrapper-forma">
-                    <forma action="#" class="section-forma__forma froma">
-                        <div class="forma__flex">
-                            <div class="forma__block1">
-                                <input type="text" class="forma__input">
-                                <input type="text" class="forma__input">
-                                <input type="text" class="forma__input">
-                            </div>
-                            <div class="forma__block">
-                                <input type="text" class="forma__input">
-                                <input type="text" class="forma__input">
-                                <input type="text" class="forma__input">
-                            </div>
-                        </div>
-
-                        <button class="btn forma__btn">
+                    <form action="#" id="forma" class="section-forma__forma froma">
+                        
+                        <input name="name" placeholder="Name" type="text" class="forma__input">
+                        <input name="email" placeholder="Email" type="text" class="forma__input">
+                        <input name="phone" placeholder="Phone" type="tel" class="forma__input">
+                        <input name="people" placeholder="People" type="number" class="forma__input">
+                        <input name="date" placeholder="Date" type="date"  class="forma__input">
+                        <input name="time" placeholder="Time" type="time" class="forma__input">
+                        <button id="btn" class="btn forma__btn">
                             BOOK NOW
                         </button>
-                   </forma> 
+                   </form> 
                 </div>
                
             </div>
