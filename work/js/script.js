@@ -19,41 +19,69 @@ btn.addEventListener("click",(e)=>{
 })
 
 
-
 ///функция работы с меню
+const btnMenu = document.querySelector("#btnMenu")
+const newMenu = document.querySelector(".new-menu")
+
+btnMenu.addEventListener("click",()=>{
+   newMenu.classList.toggle("flex-menu")
+})
+const nameMenu =document.querySelector("#name-menu")
+const priceMenu =document.querySelector("#price-menu")
+const descriptionMenu =document.querySelector("#description-menu")
+const numberMenu =document.querySelector("#number-menu")
+const newMenuBtn = document.querySelector(".new-menu__btn")
+
+
 const massPrice=[]
 for(let i =0;i<3;i++){
     massPrice[i]=document.querySelector("#price"+i)
 }
-console.log(massPrice)
+function addMenu(numberBlock=1,text,price,description,col=1){
+    for(let i=0;i<col;i++){
+        
+        let inner = document.createElement('div');
+        let title =document.createElement('p')
+        let subtitle =document.createElement('p')
+        let money =document.createElement('span')
+        money.className="block-price__money"
+        money.textContent=price+" USD"
+        title.className="block-price__title"
+        subtitle.className="block-price__subtitle"
+        inner.className="block-price__inner"
+        title.textContent=text+". . . ."
+        subtitle.textContent=description
+        inner.append(title)
+        title.append(money)
+        inner.append(subtitle)
+        massPrice[numberBlock-1].append(inner)
+        
+    }
+    }
 
-let pizza = "PIZZA QUATRO STAGIONI  . . . ."
-let coffe = "coffee QUATRO STAGIONI  . . . ."
-let chi = "chi QUATRO STAGIONI  . . . ."
-let loh = "loh QUATRO STAGIONI  . . . ."
 
-function addMenu(n,z="55,68 usd",x){
-for(let i=0;i<8;i++){
+
+
+newMenuBtn.addEventListener("click",()=>{
+    let a = nameMenu.value
+    let b = priceMenu.value
+    let s =descriptionMenu.value
+    let d = numberMenu.value
+    console.log(d)
+    if(priceMenu.value==0){
+        alert("не указана цена")
+    }
+    if(nameMenu.value==0){
+        alert("укажите укажите название блюда")
+    }
+    if(numberMenu.value>3){
+        alert("нет столько колонок,укажите от 1 до 3")
+    }else{
+        addMenu(d,a,b,s)
+    }
     
-    let inner = document.createElement('div');
-    let title =document.createElement('p')
-    let subtitle =document.createElement('p')
-    let money =document.createElement('span')
-    money.className="block-price__money"
-    money.textContent=z
-    title.className="block-price__title"
-    subtitle.className="block-price__subtitle"
-    inner.className="block-price__inner"
-    title.textContent=x
-    subtitle.textContent="Integer ullamcorper neque eu purus euismod"
-    inner.append(title)
-    title.append(money)
-    inner.append(subtitle)
     
-    massPrice[n].append(inner)
-    
-}
-}
+})
 
 // addMenu(0,22,loh)
 // addMenu(1,44,coffe)
