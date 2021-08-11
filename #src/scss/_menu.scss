@@ -76,7 +76,7 @@
     display: flex;
     max-height: 300px;
     justify-content: space-between;
-    overflow:scroll;
+    overflow:auto;
     overflow-x:hidden;
     background-color:snow;
     border-radius: 10px;
@@ -88,10 +88,12 @@
 .block-price{
     
     &__inner{
-        
+        border:1px solid rgba(51,51,51,0.2);
         flex:1 1 33%;
         padding: 20px 10px;
-        
+        position: relative;
+        margin: 5px;
+        border-radius: 10px;
     }
     &__inner *{
         color:black;
@@ -105,7 +107,27 @@
         color:rgba( #333333,  0.3);
         font-size: 12px;
     }
-   
+    &__del{
+        transition: transform 0.2s ease;
+        transform: scale(0);
+        width: 20px;
+        height: 20px;
+        background-color:burlywood;
+        position: absolute;
+        top:0;
+        right: 0;
+        color:white;
+        text-align: center;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+    &__inner:hover{
+        div{
+            transition: transform 0.2s ease;
+            transform: scale(1);
+        }
+    }
+  
 }
 #btnMenu:active{
     background-color: brown;
