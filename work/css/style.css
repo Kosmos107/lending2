@@ -1025,6 +1025,9 @@ template {
   position: relative;
   margin: 5px;
   border-radius: 10px;
+  min-width: 350px;
+  max-width: 380px;
+  overflow: auto;
 }
 
 .block-price__inner * {
@@ -1164,6 +1167,23 @@ template {
   transform: scale(1);
   padding: 2% 15px;
   padding-bottom: 8%;
+}
+
+.__error {
+  -webkit-box-shadow: 0 0 20px red;
+  box-shadow: 0 0 20px red;
+}
+
+.error {
+  color: red;
+  font-size: 3px;
+}
+
+.error {
+  color: red;
+  font-size: 9px;
+  padding-left: 5px;
+  margin-top: 5px;
 }
 
 @media (min-width: 800px) {

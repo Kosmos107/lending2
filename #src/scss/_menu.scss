@@ -94,6 +94,9 @@
         position: relative;
         margin: 5px;
         border-radius: 10px;
+        min-width: 350px;
+        max-width: 380px;
+        overflow: auto;
     }
     &__inner *{
         color:black;
@@ -210,4 +213,18 @@
     padding: 2% 15px;
     padding-bottom: 8%;
     
+}
+.__error{
+    box-shadow: 0 0 20px red ;
+}
+.error {
+    color:red;
+    font-size: 3px;
+}
+.error{
+        color: red;
+        font-size: 9px;
+        padding-left: 5px;
+        margin-top: 5px;
+        
 }

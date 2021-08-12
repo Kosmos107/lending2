@@ -32,7 +32,7 @@ function addMenu(name,price,description,colum){
     let block= {
         id:createId(),
         name:name,
-        price:price+" USB",
+        price:price,
         description:description,
         colum:colum,
     }

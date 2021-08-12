@@ -21,6 +21,7 @@ const descriptionMenu =document.querySelector("#description-menu")
 const numberMenu =document.querySelector("#number-menu")
 const newMenuBtn = document.querySelector(".new-menu__btn")
 
+
 const massPrice=[]
 for(let i =0;i<3;i++){
     massPrice[i]=document.querySelector("#price"+i)
@@ -58,7 +59,7 @@ function creatMenu(arr){
             
             delet.textContent="x"
             money.textContent=arr.price+" USD"
-            title.textContent=arr.name+". . . ."
+            title.textContent=arr.name+"____"
             subtitle.textContent=arr.description
             inner.append(delet)
             inner.append(title)
@@ -71,10 +72,7 @@ function creatMenu(arr){
             del()
 
         }
-        
-        
 
-    
        function del(){
         delMenu.forEach(btn=>{
             btn.addEventListener("click",(e)=>{
@@ -89,23 +87,49 @@ function creatMenu(arr){
               })
        }
        
+// работа с валидации
+const error =document.querySelectorAll(".error")
+
+
+
+
+
+
+function validatio(value,name,num,text){
+    if(value){
+        name.classList.add("__error")
+        error[num].textContent=text
+        return 0
+    } else{
+        name.classList.remove("__error")
+        error[num].textContent=""
+        return 1
+    }
+}
+
 
 
 newMenuBtn.addEventListener("click",()=>{
-    if(priceMenu.value==0){
-        alert("не указана цена")
-    }
-    if(nameMenu.value==0){
-        alert("укажите укажите название блюда")
-    }
-    if(numberMenu.value>3){
-        alert("нет столько колонок,укажите от 1 до 3")
-    }else{
+    let validName=(nameMenu.value==0)
+    let validPrice=(priceMenu.value==0)
+    let validNumber = parseInt(numberMenu.value)>3||parseInt(numberMenu.value)==0
+    let er = 0
+    
+    if(er==0){
+       
+        er+=validatio(validName,nameMenu,0,"укажите имя")
+        er+=validatio(validPrice,priceMenu,1,"укажите сумму")
+        er+=validatio(validNumber,numberMenu,2,"укажите от 1 до 3")
+        //  er+=validCol(numberMenu,2,"укажите от 1 до 3")
+       
+       console.log(er) 
+    } if(er>=3){
         addMenu(nameMenu.value,priceMenu.value,descriptionMenu.value,numberMenu.value)
         creatMenu(listenMenu[listenMenu.length-1])
-       
     }
-   
+    
+    
+       
 })
 
 
