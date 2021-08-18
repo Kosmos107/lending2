@@ -1,0 +1,108 @@
+.section-private{
+    background-image: url(/img/private/back.png);
+    background-position: 50% 50% ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 2%;
+    &__title{
+
+        text-align: center;
+        color: #FFFFFF;
+        
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: .5em;
+    }
+    &__body{
+       position: relative;
+        display: flex;
+        justify-content: space-around;
+        
+    }
+    &__block{
+        flex:1 1 33%;
+        
+    }
+    &__wrapper-img{
+        overflow: hidden;
+        
+        position: relative;
+        width: 85%;
+        height: 77%;
+        margin: 0 auto;
+        margin-top: 30px;
+        img{
+           
+            width: 95%;
+            height: 100%;
+            margin: 0 auto;
+            object-fit:cover;
+        }
+    }
+  
+   
+
+    &__footer{
+     
+       background-image:url(/img/private/galerie.png);
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;
+       min-height: 40vh;
+    }
+}
+
+.wrapper-img{
+    
+    &__text{
+        position: absolute;
+        color:  #FFFFFF;;
+        background-color: #000000;
+        width: 90%;
+        height: 100px;
+        font-size: 23px;
+        
+       
+        line-height: 3.9em;
+        text-align: left;
+        
+        text-transform: uppercase;
+    }
+
+
+        &__left{
+            transform: rotate(90deg);
+            text-indent:30px;
+            left:45%;
+            bottom: 33%;
+        } ; 
+        &__rigth{
+            transform: rotate(-90deg);
+            text-indent:30px;
+            right: 45%;
+            top:33%;
+        };
+}
+
+.body{
+    &__line{
+    background-color:rgba(255, 255, 255, 0.2);
+    width: 1px;
+    height: 114%;
+    position: absolute;
+    top: -14%;
+    }
+    &__data{
+        position: absolute;
+        font-size: 12px;
+        color:rgba(255, 255, 255, 0.4) ;
+        bottom: 5%;
+        font-weight: normal;
+        font-style: normal;
+    }
+    &__tel{
+        color:rgba(255, 255, 255, 0.4) ;
+    }
+}
+
+

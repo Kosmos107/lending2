@@ -120,7 +120,7 @@ newMenuBtn.addEventListener("click",()=>{
         er+=validatio(validName,nameMenu,0,"укажите имя")
         er+=validatio(validPrice,priceMenu,1,"укажите сумму")
         er+=validatio(validNumber,numberMenu,2,"укажите от 1 до 3")
-        //  er+=validCol(numberMenu,2,"укажите от 1 до 3")
+         
        
        console.log(er) 
     } if(er>=3){

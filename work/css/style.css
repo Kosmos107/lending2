@@ -1186,6 +1186,133 @@ template {
   margin-top: 5px;
 }
 
+.section-private {
+  background-image: url(/img/private/back.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 2%;
+}
+
+.section-private__title {
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5em;
+}
+
+.section-private__body {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.section-private__block {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 33%;
+  flex: 1 1 33%;
+}
+
+.section-private__wrapper-img {
+  overflow: hidden;
+  position: relative;
+  width: 85%;
+  height: 77%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.section-private__wrapper-img img {
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.section-private__footer {
+  background-image: url(/img/private/galerie.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 40vh;
+}
+
+.wrapper-img__text {
+  position: absolute;
+  color: #FFFFFF;
+  background-color: #000000;
+  width: 90%;
+  height: 100px;
+  font-size: 23px;
+  line-height: 3.9em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.wrapper-img__left {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  text-indent: 30px;
+  left: 45%;
+  bottom: 33%;
+}
+
+.wrapper-img__rigth {
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  text-indent: 30px;
+  right: 45%;
+  top: 33%;
+}
+
+.body__line {
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 1px;
+  height: 114%;
+  position: absolute;
+  top: -14%;
+}
+
+.body__data {
+  position: absolute;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+  bottom: 5%;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.body__tel {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.section-footer {
+  background-color: rgba(0, 0, 0, 0.9);
+  min-height: 20vh;
+}
+
+.section-footer__body {
+  padding: 50px 0;
+}
+
+.section-footer__text {
+  text-align: center;
+  font-size: 13px;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.section-footer__text2 {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 @media (min-width: 800px) {
   .section-menu__links:nth-child(7) {
     border: none;
