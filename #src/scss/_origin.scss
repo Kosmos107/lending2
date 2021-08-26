@@ -42,7 +42,7 @@
     right: 45%;
     bottom: -10%;
 }
-@mixin cube($px:40%,$top:25%){
+@mixin cube($px:30%,$top:25%){
     content: "";
     position: absolute;
     width: $px;
@@ -62,7 +62,7 @@
     }
     &__left::after{
         left: -6%;
-        @include cube(40%)
+        @include cube(30%)
     }
   
     @media(max-width:850px){

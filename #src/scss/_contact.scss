@@ -1,0 +1,105 @@
+.section-contact{
+    &__title{
+        color:initial;
+        line-height:  48/ 36 * 100%;
+        font-size: 36px;
+        text-align: center;
+        text-transform: uppercase;
+        padding-bottom: 20px;
+        max-width: 700px;
+        margin: 100px auto 30px;
+    }
+
+    &__subtitle{
+        color: initial;
+        text-align: center;
+        line-height:  28 / 18  *100%;
+        max-width: 500px;
+        margin: 0 auto 50px;
+    }
+  
+}
+
+.contact-forma{
+    margin-bottom: 100px;
+    &__top{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        @media (max-width:840px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__input{
+        flex:0 0 33%;
+        height: 60px;
+        border-radius: 5px;
+        background-color: #E5E5E5;
+        border: none;
+        outline: none;
+        padding: 0 20px;
+        color: black;
+        @media (max-width:840px) {
+            margin-bottom: 20px;
+            flex: auto;
+            width: 70%;
+            
+
+
+        }
+    }
+    &__input::placeholder{
+        font-weight: 200;
+    }
+    &__textarea{
+        width: 100%;
+        background-color: #E5E5E5;
+        padding:  20px;
+        color: black;
+        outline: none;
+        height: 150px;
+        resize: none;
+        border: none;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+    &__textarea::placeholder{
+        font-weight: 200;
+    }
+    &__bottom{
+        display: flex;
+        justify-content: space-between;
+        height: 70px;
+        
+        *{
+            flex: 0 0 50%;
+        }
+    }
+    &__info{
+        
+        font-size: 13px;
+        text-align: center;
+        line-height: 14px /14px *100%;
+        margin: auto 0;
+        color:rgba(33,33 ,33,0.5);
+        font-weight: 900;
+    }
+    &__button{
+        // display: block;
+        border: none;
+        background-color: #E8C300;
+        border-radius: 5px;
+        text-transform: uppercase;
+        transition: color .5s ease;
+    }
+    &__button:active{
+        background-color: chartreuse;
+        transform: scale(0.9);
+    }
+
+
+
+}
+

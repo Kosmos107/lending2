@@ -72,7 +72,7 @@
    }
   
 &__price-wrapper{
-   
+    background-color:darkblue;
     display: flex;
     max-height: 300px;
     justify-content: space-between;
@@ -81,15 +81,20 @@
     background-color:snow;
     border-radius: 10px;
     margin-bottom: 3%;
+   
+    @media (max-width:850px){
+        flex-direction: column;
+          
+    }
 }
            
 }
 
 .block-price{
-    
+   
+    flex: 1 1 50%;
     &__inner{
         border:1px solid rgba(51,51,51,0.2);
-        flex:1 1 33%;
         padding: 20px 10px;
         position: relative;
         margin: 5px;
@@ -97,6 +102,9 @@
         min-width: 350px;
         max-width: 380px;
         overflow: auto;
+        @media (max-width:850px){
+            margin: 10px auto 15px;
+        }
     }
     &__inner *{
         color:black;
@@ -144,19 +152,26 @@
     display: flex;
     transform: scale(0);
     position: relative;
-    width: 80%;
     margin: 1% auto;
     background-color:floralwhite;
     justify-content: space-around;
     // padding: 2% 15px;
     border:rgba( #333333,  0.3) 1px solid;
     border-radius: 10px;
-    // padding-bottom: 8%;
+    padding-bottom: 8%;
+    width: 100%;
    flex-wrap: wrap;
    @media(max-width:800px){
-       flex-direction: column;
+       flex-direction: column; 
+       align-items: center;
        &__input{
-           margin-top:20px;
+           margin-bottom: 20px ;
+           width: 100%;
+       }
+       &__wrapper{
+           width: 60%;
+
+           
        }
    }
     &__input{
