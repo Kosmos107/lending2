@@ -68,10 +68,10 @@
     @media(max-width:850px){
         &__left::after{
     
-            @include cube(20%,35%)
+            @include cube(30%,35%)
         }
         &__rigth::after{
-            @include cube(20%,35%)
+            @include cube(30%,35%)
         }
         
     }

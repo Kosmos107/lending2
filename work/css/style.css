@@ -948,6 +948,10 @@ template {
   margin-right: 5px;
 }
 
+.section-menu {
+  position: relative;
+}
+
 .section-menu__text h1 {
   color: black;
   text-align: center;
@@ -969,8 +973,7 @@ template {
 .section-menu__nav {
   width: 100%;
   max-width: 900px;
-  margin: 0 auto;
-  margin-top: 5%;
+  margin: 0 auto 5%;
 }
 
 .section-menu__nav ul {
@@ -999,6 +1002,10 @@ template {
   -webkit-transform: scale(1.1, 1.1);
   -ms-transform: scale(1.1, 1.1);
   transform: scale(1.1, 1.1);
+}
+
+.section-menu__links:nth-child(7) {
+  background-color: bisque;
 }
 
 .section-menu__price-wrapper {
@@ -1099,24 +1106,28 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  position: relative;
-  margin: 1% auto;
+  position: absolute;
   background-color: floralwhite;
   -ms-flex-pack: distribute;
   justify-content: space-around;
   border: rgba(51, 51, 51, 0.3) 1px solid;
   border-radius: 10px;
-  padding-bottom: 8%;
-  width: 100%;
+  top: 5%;
+  max-width: 920px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  z-index: 100;
+  padding: 2% 15px;
+  padding-bottom: 8%;
+  -webkit-transform: translateY(-20%);
+  -ms-transform: translateY(-20%);
+  transform: translateY(-20%);
+  opacity: 0;
 }
 
 .new-menu__input {
   padding: 10px 10px;
+  margin-left: 5px;
   color: black;
   border-radius: 10px;
   border: rgba(51, 51, 51, 0.3) 1px solid;
@@ -1167,11 +1178,10 @@ template {
   -webkit-transition: all 0.7s ease;
   -o-transition: all 0.7s ease;
   transition: all 0.7s ease;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  padding: 2% 15px;
-  padding-bottom: 8%;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .__error {
@@ -1249,7 +1259,7 @@ template {
   width: 80%;
   position: relative;
   min-height: 450px;
-  margin: 0 auto 20px;
+  margin: 0 auto 40px;
 }
 
 .body__wrraper-img img {
@@ -1409,9 +1419,10 @@ template {
 }
 
 .contact-forma__info {
+  padding: 0 15px;
   font-size: 13px;
   text-align: center;
-  line-height: 100%;
+  line-height: 93.3333333333%;
   margin: auto 0;
   color: rgba(33, 33, 33, 0.5);
   font-weight: 900;
@@ -1511,8 +1522,8 @@ template {
   .cube-img__left::after {
     content: "";
     position: absolute;
-    width: 20%;
-    height: 20%;
+    width: 30%;
+    height: 30%;
     border: 20px solid #E8C300;
     top: 35%;
     border-radius: 3%;
@@ -1521,8 +1532,8 @@ template {
   .cube-img__rigth::after {
     content: "";
     position: absolute;
-    width: 20%;
-    height: 20%;
+    width: 30%;
+    height: 30%;
     border: 20px solid #E8C300;
     top: 35%;
     border-radius: 3%;
@@ -1589,6 +1600,7 @@ template {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    right: 30%;
   }
 
   .new-menu__input {
