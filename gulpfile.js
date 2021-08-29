@@ -71,7 +71,7 @@ function images() {
         //     })
         // )
         .pipe(dest(path.build.img))
-        // .pipe(src(path.src.img))
+        //  .pipe(src(path.src.img))
         .pipe(
             imagemin({
                 progressive: true,

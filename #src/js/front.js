@@ -1,14 +1,3 @@
-////работа с формой
-
-const forma=document.querySelector('#forma')
-const input=document.querySelectorAll("input")
-const inputDate=document.querySelector('input[type="date"]')
-const btn = document.querySelector('#btn')
-btn.addEventListener("click",(e)=>{
-    e.preventDefault()
-})
-
-
 
 
 
@@ -94,18 +83,18 @@ function creatMenu(arr){
 const error =document.querySelectorAll(".error")
 
 
+console.log(error)
 
 
 
-
-function validatio(value,name,num,text){
+function validatio(value,name,error,text){
     if(value){
         name.classList.add("__error")
-        error[num].textContent=text
+        error.textContent=text
         return 0
     } else{
         name.classList.remove("__error")
-        error[num].textContent=""
+        error.textContent=""
         return 1
     }
 }
@@ -120,9 +109,9 @@ newMenuBtn.addEventListener("click",()=>{
     
     if(er==0){
        
-        er+=validatio(validName,nameMenu,0,"укажите имя")
-        er+=validatio(validPrice,priceMenu,1,"укажите сумму")
-        er+=validatio(validNumber,numberMenu,2,"укажите от 1 до 3")
+        er+=validatio(validName,nameMenu,error[2],"укажите имя")
+        er+=validatio(validPrice,priceMenu,error[3],"укажите сумму")
+        er+=validatio(validNumber,numberMenu,error[4],"укажите от 1 до 3")
          
        
        console.log(er) 
@@ -140,3 +129,14 @@ newMenuBtn.addEventListener("click",()=>{
 peresovka(listenMenu)
 
 
+//функция скролла
+const array = document.querySelector(".array")
+const about = document.querySelector(".section-about")
+console.log(about)
+array.addEventListener("click",()=>{
+    about.scrollIntoView({
+        top:true,
+        block:"center",
+        behavior:"smooth"
+    })
+})
