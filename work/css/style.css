@@ -1565,6 +1565,10 @@ template {
     border-radius: 3%;
   }
 
+  .content-header {
+    border: none;
+  }
+
   .content-header__subtitle {
     font-size: 80px;
   }

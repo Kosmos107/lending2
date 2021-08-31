@@ -122,6 +122,9 @@
     padding: 15% 20px 30px 20px;
     text-align: center;
     position: relative;
+    @media (max-width:850px) {
+        border: none;
+    }
    
     &__line{
         position: absolute;
